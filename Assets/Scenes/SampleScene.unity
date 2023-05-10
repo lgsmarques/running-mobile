@@ -493,7 +493,6 @@ GameObject:
   - component: {fileID: 352680133}
   - component: {fileID: 352680132}
   - component: {fileID: 352680136}
-  - component: {fileID: 352680131}
   - component: {fileID: 352680137}
   m_Layer: 0
   m_Name: PlayerContainer
@@ -502,20 +501,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &352680131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352680130}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4088b331d4667341acd293e45b86bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 761682626}
-  lerpSpeed: 1
 --- !u!65 &352680132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -624,7 +609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 761682626}
   lerpSpeed: 2
-  speed: 8
+  defaultSpeed: 5
   tagToCheckEnemy: Enemy
   tagToCheckEndLine: EndLine
   startScreen: {fileID: 877623698}
@@ -1371,7 +1356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.21336304, y: -0.04876673, z: 0.010664191, w: 0.97569686}
+  m_LocalRotation: {x: 0.213363, y: -0.048766702, z: 0.010664185, w: 0.97569686}
   m_LocalPosition: {x: 0.94, y: 4.33, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1717,7 +1702,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591345812}
-  m_LocalRotation: {x: 0.21336304, y: -0.04876673, z: 0.010664191, w: 0.97569686}
+  m_LocalRotation: {x: 0.213363, y: -0.048766702, z: 0.010664185, w: 0.97569686}
   m_LocalPosition: {x: 0.94, y: 4.33, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2453,7 +2438,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7595540506588440593, guid: edfbec453ef1b974f8496018d19f0c57, type: 3}
       propertyPath: m_Name
-      value: PFB_PowerUp
+      value: PFB_PowerUpSpeedUp
       objectReference: {fileID: 0}
     - target: {fileID: 7595540506588440597, guid: edfbec453ef1b974f8496018d19f0c57, type: 3}
       propertyPath: m_RootOrder
