@@ -20,11 +20,12 @@ public class PlayerController : Singleton<PlayerController>
     private bool _canRun;
     private Vector3 _pos;
     private float _currentSpeed;
+    private bool _invincible;
 
     private void Start()
     {
         startScreen.SetActive(true);
-        ResetSpeed();
+        ResetAllPowerUps();
     }
 
     void Update()
@@ -41,7 +42,8 @@ public class PlayerController : Singleton<PlayerController>
     {
         if(collision.transform.CompareTag(tagToCheckEnemy))
         {
-            EndGame();
+            if(!_invincible) EndGame();
+            if (_invincible) collision.gameObject.SetActive(false);
         }
     }
 
@@ -67,6 +69,16 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     #region
+    public void PowerUpInvincible()
+    {
+        _invincible = true;
+    }
+
+    public void ResetInvincible()
+    {
+        _invincible = false;
+    }
+
     public void PowerUpSpeedUp(float newSpeed)
     {
         _currentSpeed = newSpeed;
@@ -75,6 +87,12 @@ public class PlayerController : Singleton<PlayerController>
     public void ResetSpeed()
     {
         _currentSpeed = defaultSpeed;
+    }
+
+    public void ResetAllPowerUps()
+    {
+        ResetInvincible();
+        ResetSpeed();
     }
     #endregion
 }

@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 10028171079050a418600901f6a469b6, type: 2}
+  - {fileID: 2100000, guid: 4efb14730114f074680119ab583611d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7595540506588440597}
   - component: {fileID: 7595540506588440592}
-  - component: {fileID: 2031094455}
+  - component: {fileID: 5661993487239284512}
   m_Layer: 0
-  m_Name: PFB_PowerUpSpeedUp
+  m_Name: PFB_PowerUpSpeedInvincible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2031094455
+--- !u!114 &5661993487239284512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,11 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7595540506588440593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f6666ec54cb9bb4692bc9300b6581c6, type: 3}
+  m_Script: {fileID: 11500000, guid: f97d032d0dc253d4481d234e054d7fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   compareTag: Player
   timeToHide: 2
-  graphicItem: {fileID: 7595540506560911980}
-  duration: 3
-  newSpeed: 15
+  graphicItem: {fileID: 0}
+  duration: 4
