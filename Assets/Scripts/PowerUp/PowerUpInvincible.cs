@@ -7,12 +7,12 @@ public class PowerUpInvincible : PowerUpBase
     protected override void StartPowerUp()
     {
         base.StartPowerUp();
-        PlayerController.Instance.PowerUpInvincible();
+        PlayerController.Instance.SetInvincible(true);
     }
 
     protected override void EndPowerUp()
     {
         base.EndPowerUp();
-        PlayerController.Instance.ResetInvincible();
+        PlayerController.Instance.SetInvincible(false);
     }
 }

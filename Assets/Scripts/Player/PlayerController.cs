@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Core.Singleton;
+using DG.Tweening;
 
 public class PlayerController : Singleton<PlayerController>
 {
@@ -10,20 +11,25 @@ public class PlayerController : Singleton<PlayerController>
     public Transform target;
     public float lerpSpeed = 1f;
 
-    public float defaultSpeed = 1;
-    public string tagToCheckEnemy = "Enemy";
-    public string tagToCheckEndLine = "EndLine";
+    [Header("Start Screen")]
     public GameObject startScreen;
     public TextMeshProUGUI startScreenText;
     public LoadSceneHelper loadSceneHeloper;
+
+    [Header("Default")]
+    public float defaultSpeed = 1;
+    public string tagToCheckEnemy = "Enemy";
+    public string tagToCheckEndLine = "EndLine";   
 
     private bool _canRun;
     private Vector3 _pos;
     private float _currentSpeed;
     private bool _invincible;
+    private Vector3 _startPosition;
 
     private void Start()
     {
+        _startPosition = transform.position;
         startScreen.SetActive(true);
         ResetAllPowerUps();
     }
@@ -69,30 +75,26 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     #region
-    public void PowerUpInvincible()
+    public void SetInvincible(bool invincible)
     {
-        _invincible = true;
+        _invincible = invincible;
     }
 
-    public void ResetInvincible()
-    {
-        _invincible = false;
-    }
-
-    public void PowerUpSpeedUp(float newSpeed)
+    public void SetSpeed(float newSpeed)
     {
         _currentSpeed = newSpeed;
     }
 
-    public void ResetSpeed()
-    {
-        _currentSpeed = defaultSpeed;
-    }
 
+    public void SetHeight(float newHeight, Ease ease)
+    {
+        transform.DOMoveY(transform.position.y + newHeight, .5f).SetEase(ease);
+    }
     public void ResetAllPowerUps()
     {
-        ResetInvincible();
-        ResetSpeed();
+        SetInvincible(false);
+        SetSpeed(defaultSpeed);
+        transform.position = _startPosition;
     }
     #endregion
 }
