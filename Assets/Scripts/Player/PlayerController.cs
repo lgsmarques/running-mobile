@@ -19,7 +19,8 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Default")]
     public float defaultSpeed = 1;
     public string tagToCheckEnemy = "Enemy";
-    public string tagToCheckEndLine = "EndLine";   
+    public string tagToCheckEndLine = "EndLine";
+    public GameObject coinCollector;
 
     private bool _canRun;
     private Vector3 _pos;
@@ -85,11 +86,16 @@ public class PlayerController : Singleton<PlayerController>
         _currentSpeed = newSpeed;
     }
 
-
     public void SetHeight(float newHeight, Ease ease)
     {
         transform.DOMoveY(transform.position.y + newHeight, .5f).SetEase(ease);
     }
+
+    public void ChangeCoinCollectorSize(float newSize = 1)
+    {
+        coinCollector.transform.localScale = Vector3.one * newSize;
+    }
+
     public void ResetAllPowerUps()
     {
         SetInvincible(false);
