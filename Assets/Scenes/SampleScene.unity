@@ -685,7 +685,6 @@ MonoBehaviour:
   tagToCheckEnemy: Enemy
   tagToCheckEndLine: EndLine
   coinCollector: {fileID: 1789624306}
-  animator: {fileID: 174256733}
   triggerRun: Run
 --- !u!1001 &426204045
 PrefabInstance:
@@ -1950,6 +1949,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3692889949362690589, guid: 9e69fad7830710d4783bf270646479cd, type: 3}
   m_PrefabInstance: {fileID: 426204045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &903403639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5531986718136724959, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 792075359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &903403640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903403639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39a13bae7efdb64eb6eb91be3f31ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 174256733}
+  animatorSetups:
+  - type: 0
+    trigger: Idle
+  - type: 1
+    trigger: Run
+  - type: 2
+    trigger: Death
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,6 @@ public class PlayerController : Singleton<PlayerController>
     public string tagToCheckEnemy = "Enemy";
     public string tagToCheckEndLine = "EndLine";
     public GameObject coinCollector;
-    public Animator animator;
     public string triggerRun = "Run";
 
     private bool _canRun;
@@ -75,7 +74,7 @@ public class PlayerController : Singleton<PlayerController>
     public void StartToRun()
     {
         _canRun = true;
-        animator.SetTrigger(triggerRun);
+        AnimatorManager.Instance.Play(AnimatorManager.AnimationType.RUN);
     }
 
     #region
