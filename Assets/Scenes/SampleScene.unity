@@ -681,6 +681,7 @@ MonoBehaviour:
   startScreen: {fileID: 877623698}
   startScreenText: {fileID: 752621628}
   loadSceneHeloper: {fileID: 877623700}
+  delayToReset: 2
   defaultSpeed: 8
   tagToCheckEnemy: Enemy
   tagToCheckEndLine: EndLine
@@ -2051,7 +2052,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.21336302, y: -0.048766725, z: 0.01066419, w: 0.97569686}
+  m_LocalRotation: {x: 0.213363, y: -0.048766695, z: 0.010664181, w: 0.97569686}
   m_LocalPosition: {x: 0.94, y: 4.33, z: -29.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2644,7 +2645,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591345812}
-  m_LocalRotation: {x: 0.21336302, y: -0.048766725, z: 0.01066419, w: 0.97569686}
+  m_LocalRotation: {x: 0.213363, y: -0.048766695, z: 0.010664181, w: 0.97569686}
   m_LocalPosition: {x: 0.94, y: 4.33, z: -29.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

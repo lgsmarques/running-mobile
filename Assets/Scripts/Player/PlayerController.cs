@@ -15,6 +15,7 @@ public class PlayerController : Singleton<PlayerController>
     public GameObject startScreen;
     public TextMeshProUGUI startScreenText;
     public LoadSceneHelper loadSceneHeloper;
+    public float delayToReset = 2;
 
     [Header("Default")]
     public float defaultSpeed = 1;
@@ -50,8 +51,13 @@ public class PlayerController : Singleton<PlayerController>
     {
         if(collision.transform.CompareTag(tagToCheckEnemy))
         {
-            if(!_invincible) EndGame();
-            if (_invincible) collision.gameObject.SetActive(false);
+            if (!_invincible)
+            {
+                MoveBack(collision.transform);
+                AnimatorManager.Instance.Play(AnimatorManager.AnimationType.DEATH);
+                EndGame();
+            }
+            else if (_invincible) collision.gameObject.SetActive(false);
         }
     }
 
@@ -59,13 +65,20 @@ public class PlayerController : Singleton<PlayerController>
     {
         if(other.transform.CompareTag(tagToCheckEndLine))
         {
-            EndGame();
+            AnimatorManager.Instance.Play(AnimatorManager.AnimationType.IDLE);
+            EndGame();            
         }
     }
 
     private void EndGame()
     {
         _canRun = false;
+        StartCoroutine(WaitForReset());
+    }
+
+    private IEnumerator WaitForReset()
+    {
+        yield return new WaitForSeconds(3);
         loadSceneHeloper.Load(0);
         startScreenText.text = "Restart";
         startScreen.SetActive(true);
@@ -75,6 +88,11 @@ public class PlayerController : Singleton<PlayerController>
     {
         _canRun = true;
         AnimatorManager.Instance.Play(AnimatorManager.AnimationType.RUN);
+    }
+
+    public void MoveBack(Transform t)
+    {
+        t.DOMoveZ(1f, 0.5f).SetRelative();
     }
 
     #region
