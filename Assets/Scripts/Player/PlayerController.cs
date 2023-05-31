@@ -104,6 +104,7 @@ public class PlayerController : Singleton<PlayerController>
     public void SetSpeed(float newSpeed)
     {
         _currentSpeed = newSpeed;
+        if(_canRun) AnimatorManager.Instance.Play(AnimatorManager.AnimationType.RUN, newSpeed / defaultSpeed);
     }
 
     public void SetHeight(float newHeight, Ease ease)
