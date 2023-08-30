@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149659561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.895, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1421,7 +1421,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889883443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -19.91}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1535,8 +1535,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.21336302, y: -0.048766725, z: 0.01066419, w: 0.97569686}
-  m_LocalPosition: {x: 0.94, y: 4.33, z: -29.29}
+  m_LocalRotation: {x: 0.213363, y: -0.048766702, z: 0.010664185, w: 0.97569686}
+  m_LocalPosition: {x: 0.94, y: 4.33, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1809,8 +1809,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591345812}
-  m_LocalRotation: {x: 0.21336302, y: -0.048766725, z: 0.01066419, w: 0.97569686}
-  m_LocalPosition: {x: 0.94, y: 4.33, z: -29.29}
+  m_LocalRotation: {x: 0.213363, y: -0.048766702, z: 0.010664185, w: 0.97569686}
+  m_LocalPosition: {x: 0.94, y: 4.33, z: -9.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2158,6 +2158,17 @@ MonoBehaviour:
   container: {fileID: 149659562}
   levels:
   - {fileID: 7992022659473857300, guid: d902c2b348baa0c46bb79abc9f2a8af4, type: 3}
+  levelPiecesStart:
+  - {fileID: 2729129612594843863, guid: 6be0c22125d77ae4d92dfc204a0066ec, type: 3}
+  levelPiecesEnd:
+  - {fileID: 2729129612594843863, guid: 41172843020eff445820ad7db8555e8f, type: 3}
+  levelPieces:
+  - {fileID: 2729129612594843863, guid: 7c5cdf1805d3412459a2b349c0e05b1d, type: 3}
+  - {fileID: 2729129612594843863, guid: 11c574f39038cf14aa6c94cc1266567f, type: 3}
+  - {fileID: 2729129612594843863, guid: 3158943734435fc40851569c2362d313, type: 3}
+  piecesStartNumber: 3
+  piecesEndNumber: 1
+  piecesNumber: 20
 --- !u!4 &1911230707
 Transform:
   m_ObjectHideFlags: 0
